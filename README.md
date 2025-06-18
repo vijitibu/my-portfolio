@@ -6,7 +6,7 @@ Developers will learn how to leverage Next.js's advanced features, such as routi
 
 Through this tutorial, developers can create a visually captivating and responsive portfolio website that effectively showcases their skills, projects, and achievements. By deploying the website using Next.js's built-in deployment options, developers can share their portfolio with the world and attract potential clients or employers. Overall, this project equips developers with the tools and knowledge to build modern and professional portfolio websites that stand out in today's competitive landscape.
 
-![Portfolio Website](public/PortfolioWebsite.png)
+![Portfolio Website](public/portfolio-site.png)
 
 <div align="center">
   <div>
@@ -17,35 +17,9 @@ Through this tutorial, developers can create a visually captivating and responsi
 
   <h3 align="center">Portfolio Website</h3>
 
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@constGenius" target="_blank"><b>constGenius</b></a> YouTube. Join the Genius family!
-    </div>
 </div>
 
 ## 📋 <a name="table">Table of Contents</a>
-
-1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🤸 [Quick Start](#quick-start)
-4. 🕸️ [Snippets](#snippets)
-5. 🔗 [Links](#links)
-6. 🚀 [More](#more)
-
-## 🚨 Tutorial
-
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@constGenius" target="_blank"><b>constGenius</b></a>. 
-
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
-
-<a href="https://youtu.be/0Jua0kZZ-dE" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
-
-## <a name="introduction">🤖 Introduction</a>
-
-Built with Next.js, Framer Motion, TailwindCSS, and TypeScript, this landing page not only looks great but also serves as a hands-on project to reinforce one's understanding of these technologies.
-
-<a href="https://discord.gg/KGzJGrRJkG" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
-
-## <a name="tech-stack">⚙️ Tech Stack</a>
 
 - Next.js
 - Tailwind CSS
@@ -65,8 +39,8 @@ Make sure you have the following installed on your machine:
 **Cloning the Repository**
 
 ```bash
-git clone https://github.com/constgenius/ModernPortfolioWebsite
-cd travel_ui_ux
+git clone https://github.com/vijitibu/my-portfolio
+
 ```
 
 **Installation**
