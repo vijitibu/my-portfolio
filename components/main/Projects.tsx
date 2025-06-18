@@ -30,7 +30,7 @@ An application for managing tasks and projects, with features such as task creat
         />
         <ProjectCard
           src="/3.png"
-          title="Autonomous College Degree Certificate printing portal"
+          title="Degree Certificate Printing Portal"
           description="This portal is for printing the Degree Certificate for all the courses in
 Autonomous College. It is handled by Section"
         />

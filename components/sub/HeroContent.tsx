@@ -47,7 +47,7 @@ const HeroContent = () => {
           className="text-base md:text-lg text-gray-400 my-5 max-w-[600px] space-y-3"
         >
           <strong>
-            I’m a Front-End Developer with over 12 years of experience
+            I’m a Front-End Developer with over 13 years of experience
           </strong>{" "}
           building scalable and user-centric web applications. I bring expertise
           in <span className="text-white font-medium">React.js</span>,{" "}
@@ -88,7 +88,7 @@ const HeroContent = () => {
       >
         <div className="p-2 md:p-3 bg-gradient-to-br from-purple-700 via-purple-500 to-indigo-700 rounded-[24px] shadow-xl">
           <Image
-            src="/viji-photo1.png"
+            src="/viji-photo1.jpg"
             alt="Viji Prabha"
             width={220}
             height={220}

@@ -14,7 +14,6 @@ export const Experiences: ExperienceType[] = [
     description: [
       "Transformed Figma designs into pixel-perfect, responsive React components using TypeScript.",
       "Ensured cross-device compatibility with a mobile-first approach and media query tuning.",
-      "Collaborated with designers and product teams to refine UI/UX for accessibility and performance.",
       "Utilized Tailwind CSS and custom theming to maintain consistent design systems across the application.",
     ],
     technologies: ["TypeScript", "Next.js", "Tailwind CSS"],
@@ -22,7 +21,7 @@ export const Experiences: ExperienceType[] = [
   {
     title: "Senior Software Developer",
     company: "BVDATA SOLUTIONS, KOTTAYAM, KERALA.",
-    duration: "July 2018 - June 2021",
+    duration: "June 2021 - Sep 2024",
     description: [
       "Maintained company brand standards by adhering to design and style guidelines.",
       "Developed a responsive website using React.js, Material-UI, and Tailwind CSS.",
