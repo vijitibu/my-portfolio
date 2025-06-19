@@ -445,6 +445,3 @@ export const Skill_data = [
 
 </details>
 
-## <a name="links">🔗 Links</a>
-
-Assets used in the project are here [here](https://drive.google.com/drive/folders/1GmOueE394BqMbteB4Dq-fPelNdUDrERl?usp=sharing)
