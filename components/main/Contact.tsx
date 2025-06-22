@@ -9,7 +9,6 @@ type Inputs = {
   subject: string;
   message: string;
 };
-a;
 
 export default function ContactPage() {
   const { register, handleSubmit, reset } = useForm<Inputs>();
