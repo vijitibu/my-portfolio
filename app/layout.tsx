@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import StarCanvas from "@/components/main/StarCanvas";
+import dynamic from "next/dynamic";
+
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
-import dynamic from "next/dynamic";
+
+//  Dynamic import for StarCanvas
+const StarCanvas = dynamic(() => import("@/components/main/StarCanvas"), {
+  ssr: false,
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,20 +20,19 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
-  const StarCanvas = dynamic(() => import("@/components/main/StarCanvas"), {
-    ssr: false,
-  });
+}) {
   return (
     <html lang="en">
-      <body className="relative bg-[#030014] overflow-y-scroll overflow-x-hidden min-h-screen">
-        <div className="pointer-events-none absolute inset-0 z-0">
+      <body className="relative bg-[#030014] overflow-x-hidden overflow-y-scroll min-h-screen">
+        {/* Ensure StarCanvas doesn't block UI */}
+        <div className="pointer-events-none fixed inset-0 z-0">
           <StarCanvas />
         </div>
 
-        <div className="relative z-10">
+        {/*  z-50 ensures navbar is on top */}
+        <div className="relative z-[100]">
           <Navbar />
           {children}
           <Footer />

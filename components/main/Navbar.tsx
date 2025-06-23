@@ -11,7 +11,6 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
-  // Listen for scroll and set active section
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 100;
@@ -25,7 +24,7 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Set initial state
+    handleScroll();
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -33,7 +32,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#2A0E61]/50 bg-[#03001417] backdrop-blur-md z-50 px-6 md:px-10">
+    <div className="w-full h-[65px] fixed top-0 z-[100] px-6 md:px-10 bg-[#030014cc] backdrop-blur-md border-b border-[#2A0E61]/50">
       <div className="w-full h-full flex items-center justify-between">
         {/* Logo */}
         <a href="#about-me" className="flex items-center">
@@ -43,8 +42,8 @@ const Navbar = () => {
           </span>
         </a>
 
-        {/* Desktop Nav Links */}
-        <div className="hidden md:flex items-center gap-6 border border-[#7042f861] bg-[#0300145e] px-5 py-2 rounded-full text-gray-300 text-sm font-medium">
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-6 bg-[#03001480] px-5 py-2 rounded-full text-gray-300 text-sm font-medium">
           {[
             { label: "About", href: "#about-me" },
             { label: "Skills", href: "#skills" },
@@ -73,7 +72,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Toggle Button */}
+        {/* Mobile Toggle */}
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? (
@@ -108,7 +107,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden flex flex-col items-start mt-2 px-4 py-3 bg-[#030014] rounded-lg text-gray-200 gap-2">
+        <div className="md:hidden flex flex-col items-start mt-2 px-4 py-3 bg-[#030014] rounded-lg text-gray-200 gap-2 z-[100]">
           {[
             { label: "About", href: "#about-me" },
             { label: "Skills", href: "#skills" },

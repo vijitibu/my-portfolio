@@ -15,7 +15,7 @@ const HeroContent = () => {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex flex-col lg:flex-row items-center justify-between px-6 md:px-16 lg:px-24 mt-10 md:mt-16 lg:mt-20 w-full z-[20]"
+      className="flex flex-col lg:flex-row items-center justify-between px-6 md:px-16 lg:px-24 pt-[80px] mt-4 md:pt-0 md:mt-16 lg:mt-20 w-full z-[20]"
       id="about-me"
     >
       {/* Left Section - Text Content */}
@@ -23,7 +23,7 @@ const HeroContent = () => {
         {/* Welcome Box */}
         <motion.div
           variants={slideInFromTop}
-          className="py-2 px-4 border border-purple-400/50 bg-purple-900/10 backdrop-blur-sm rounded-md flex items-center w-fit shadow-sm"
+          className="py-2 px-4 border border-purple-400/50 bg-purple-900/10 backdrop-blur-sm rounded-md flex items-center w-fit shadow-sm mt-4 sm:mt-0"
         >
           <SparklesIcon className="text-purple-300 mr-2 h-5 w-5" />
           <h1 className="text-sm text-purple-200 font-medium">

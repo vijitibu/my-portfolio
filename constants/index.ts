@@ -75,16 +75,6 @@ export const Socials = [
     url: "https://github.com/vijitibu",
   },
   {
-    name: "Instagram",
-    src: "/icons-instagram.svg",
-    url: "https://www.instagram.com/viji_tibu?igsh=MWQzYjFpeXUxNDF3Ng==",
-  },
-  {
-    name: "Facebook",
-    src: "/icons-facebook.svg",
-    url: "https://www.facebook.com/share/1bGGv1sgw6/",
-  },
-  {
     name: "Linkedin",
     src: "/icons-linkedin.svg",
     url: "https://www.linkedin.com/in/viji-prabha-02996327/",
