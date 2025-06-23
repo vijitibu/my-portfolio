@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  output: "standalone", // This reduces unnecessary files
+  experimental: {
+    outputFileTracingRoot: "./",
+  },
+};
 
-export default nextConfig;
+module.exports = nextConfig;
