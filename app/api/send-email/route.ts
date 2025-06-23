@@ -1,15 +1,22 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: Request) {
+  // ✅ Runtime-safe check
+  const RESEND_API_KEY = process.env.RESEND_API_KEY;
+  if (!RESEND_API_KEY) {
+    return NextResponse.json(
+      { success: false, error: "Missing RESEND_API_KEY" },
+      { status: 500 }
+    );
+  }
+
+  const resend = new Resend(RESEND_API_KEY);
   const { name, email, subject, message } = await req.json();
 
   try {
-    // 📧 Send email to yourself
     const mainEmail = await resend.emails.send({
-      from: "Your Name <onboarding@resend.dev>", // MUST be verified
+      from: "Your Name <onboarding@resend.dev>",
       to: [process.env.EMAIL_TO || "prabha.viji@gmail.com"],
       subject,
       html: `
@@ -19,7 +26,6 @@ export async function POST(req: Request) {
       `,
     });
 
-    // ✅ Send auto-response to user
     const autoReply = await resend.emails.send({
       from: "Your Name <onboarding@resend.dev>",
       to: [email],
@@ -27,7 +33,6 @@ export async function POST(req: Request) {
       html: `
         <p>Hi ${name},</p>
         <p>Thank you for contacting me! I’ve received your message and will get back to you shortly.</p>
-        <p><strong>Your Message:</strong></p>
         <blockquote>${message}</blockquote>
         <p>Warm regards,<br/>Viji</p>
       `,
