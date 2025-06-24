@@ -11,6 +11,7 @@ const ExperienceCard = ({
   description,
   index,
   technologies,
+  link,
 }: {
   title: string;
   company: string;
@@ -18,6 +19,7 @@ const ExperienceCard = ({
   description: string[];
   index: number;
   technologies: string[];
+  link?: string; // ✅ Make link optional
 }) => {
   return (
     <motion.div
@@ -32,7 +34,20 @@ const ExperienceCard = ({
       viewport={{ once: true }}
     >
       <h3 className="text-xl font-semibold text-[#F6DFDB]">{title}</h3>
-      <p className="text-sm text-[#AAA6C3]">{company}</p>
+      <p className="text-sm text-[#AAA6C3]">
+        {link ? (
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-blue-400 hover:text-blue-300 transition"
+          >
+            {company}
+          </a>
+        ) : (
+          company
+        )}
+      </p>
       <p className="text-xs text-[#635f7d] mb-3">{duration}</p>
 
       <p className="text-sm text-[#E5E5E5] leading-7 mb-4">
@@ -56,7 +71,7 @@ const ExperienceCard = ({
 const ExperienceSection = () => {
   return (
     <section
-      className="flex flex-col items-center justify-center gap-8 relative py-20  px-6  text-white overflow-hidden"
+      className="flex flex-col items-center justify-center gap-8 relative py-20 px-6 text-white overflow-hidden"
       id="experiences"
     >
       <motion.h2
@@ -79,6 +94,7 @@ const ExperienceSection = () => {
             duration={exp.duration}
             description={exp.description}
             technologies={exp.technologies}
+            link={exp.link} // ✅ Pass the optional link
           />
         ))}
       </div>

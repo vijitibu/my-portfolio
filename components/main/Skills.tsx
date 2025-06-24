@@ -15,7 +15,7 @@ const uniqueSkills = mergedSkills.filter(
 const Skills = () => {
   return (
     <section
-      className="flex flex-col items-center justify-center gap-10 h-full relative overflow-hidden py-20 px-4"
+      className="flex flex-col items-center justify-center gap-10 h-full relative overflow-hidden py-10 px-4"
       id="skills"
       style={{ transform: "scale(0.95)" }}
     >

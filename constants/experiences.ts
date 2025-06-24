@@ -4,6 +4,7 @@ export type ExperienceType = {
   duration: string;
   description: string[];
   technologies: string[];
+  link?: string;
 };
 
 export const Experiences: ExperienceType[] = [
@@ -22,6 +23,7 @@ export const Experiences: ExperienceType[] = [
     title: "Senior Software Developer",
     company: "BVDATA SOLUTIONS, KOTTAYAM, KERALA.",
     duration: "June 2021 - Sep 2024",
+    link: "https://www.bvdatasolutions.com",
     description: [
       "Maintained company brand standards by adhering to design and style guidelines.",
       "Developed a responsive website using React.js, Material-UI, and Tailwind CSS.",
